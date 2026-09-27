@@ -1,0 +1,772 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: #0071f8;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo i {
+    font-size: 30px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.btn-signin {
+    background-color: #ee626b;
+    padding: 10px 22px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    transition: 0.3s ease;
+}
+
+.btn-signin:hover {
+    background-color: #0071f8 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #0071f8 0%, #0052cc 100%);
+    padding: 80px 0 120px 0;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    position: relative;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content .subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.hero-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 180px;
+    height: 4px;
+    background-color: #ee626b;
+    border-radius: 2px;
+}
+
+.hero-content p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    max-width: 450px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 5px;
+    display: flex;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 12px 25px;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-box button {
+    background-color: #ee626b;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #0071f8;
+}
+
+/* Hero Banner Image */
+.hero-banner {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 25px;
+    overflow: visible;
+    max-width: 400px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 25px;
+    display: block;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.badge-price {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #0071f8;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+.badge-discount {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background-color: #ee626b;
+    color: #fff;
+    font-weight: 800;
+    font-size: 22px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(238, 98, 107, 0.4);
+}
+
+/* Features Section */
+.features-section {
+    margin-top: -60px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #0071f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    font-size: 32px;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.feature-card:hover .icon-box {
+    background-color: #ee626b;
+}
+
+.feature-card h3 {
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin: 0 auto 40px auto;
+    }
+
+    .search-box {
+        margin: 0 auto;
+    }
+
+    .hero-banner {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .hero-content h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-section {
+        border-bottom-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+    }
+}
+/* =========================================
+   Common Section Styles (Header & Buttons)
+   ========================================= */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.section-header .subtitle {
+    color: #ee626b;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section-header h2 {
+    color: #1e1e1e;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.btn-main {
+    background-color: #ee626b;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #0071f8;
+}
+
+/* =========================================
+   1. Trending Games Section
+   ========================================= */
+.trending-section {
+    padding: 60px 0;
+}
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.game-card {
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+}
+
+.game-card .card-thumb {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.game-card .card-thumb img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.price-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #0071f8;
+    padding: 6px 14px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-tag .old-price {
+    font-size: 11px;
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1;
+}
+
+.price-tag .current-price {
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.game-card .card-content {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-card .game-info .category {
+    font-size: 12px;
+    color: #aaaaaa;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.game-card .game-info h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e1e1e;
+}
+
+.btn-cart {
+    width: 40px;
+    height: 40px;
+    background-color: #ee626b;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cart:hover {
+    background-color: #0071f8;
+}
+
+/* =========================================
+   2. Most Played / Top Games Section
+   ========================================= */
+.top-games-section {
+    padding: 60px 0 100px 0;
+    background-color: #fafafa;
+    border-radius: 150px 150px 0 0;
+}
+
+.top-games-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.top-game-card {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.top-game-card:hover {
+    transform: translateY(-8px);
+}
+
+.top-game-card .card-thumb img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.top-game-card .card-content .category {
+    font-size: 12px;
+    color: #aaaaaa;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.top-game-card .card-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 15px;
+}
+
+.btn-explore {
+    display: inline-block;
+    background-color: #ee626b;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #0071f8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .top-games-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .trending-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .trending-grid,
+    .top-games-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================
+   3. Top Categories Section
+   ========================================= */
+.categories-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title-center {
+    margin-bottom: 50px;
+}
+
+.section-title-center .subtitle {
+    color: #ee626b;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section-title-center h2 {
+    color: #1e1e1e;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #0071f8;
+    border-radius: 25px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+}
+
+.category-card .cat-label {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 0;
+}
+
+.category-card .thumb {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.category-card .thumb img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   4. CTA (Pre-Order & Newsletter) Section
+   ========================================= */
+.cta-section {
+    position: relative;
+    padding: 80px 0 100px 0;
+}
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.cta-card {
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    padding: 50px 40px;
+    width: 38%;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.cta-card .subtitle {
+    color: #ee626b;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.cta-card h2 {
+    color: #1e1e1e;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.cta-card h2 .highlight {
+    color: #0071f8;
+}
+
+.cta-card p {
+    color: #7a7a7a;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.cta-bg-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    z-index: 1;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.cta-bg-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.newsletter-form input {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #333;
+}
+
+.newsletter-form .btn-main {
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* =========================================
+   5. Footer Section
+   ========================================= */
+.footer {
+    background: linear-gradient(135deg, #0071f8 0%, #0052cc 100%);
+    padding: 35px 0;
+    text-align: center;
+    border-radius: 120px 120px 0 0;
+}
+
+.footer p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* =========================================
+   Responsive Design Adjustments
+   ========================================= */
+@media (max-width: 1200px) {
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .cta-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cta-card {
+        width: 100%;
+    }
+
+    .cta-bg-image {
+        position: relative;
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+
+    .cta-bg-image img {
+        height: 300px;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        border-radius: 60px 60px 0 0;
+    }
+}
